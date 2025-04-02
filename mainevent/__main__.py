@@ -15,6 +15,7 @@ from mainevent.mainevent import subscriber, publisher, Pool
 
 
 if __name__ == '__main__':
+    print("Running")
     @subscriber("test", host='0.0.0.0', port=9019)
     async def print_egads(event):
         #print(f"Edit ID: {event}")
