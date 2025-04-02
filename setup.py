@@ -7,7 +7,6 @@ setup(
     author='Liam Earley',
     author_email='liamearley7@gmail.com',
     description='Mainevent SSE Server Python Client',
-    package_dir = {"": "mainevent"},
-    packages=find_packages(),    
+    packages=["mainevent"],    
     install_requires=['wheel', 'aiohttp', 'aiosseclient', 'aiostream'],
 )
