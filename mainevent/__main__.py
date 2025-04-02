@@ -15,18 +15,10 @@ from mainevent.mainevent import subscriber, publisher, Pool
 
 
 if __name__ == '__main__':
-    @subscriber("example")
+    @subscriber("example", host='0.0.0.0', port=9019)
     async def print_egads(event):
         #print(f"Edit ID: {event}")
         return (event.data)
-
-
-    @publisher("example", interval=3)
-    async def test_events():
-        async for event in aiosseclient('https://stream.wikimedia.org/v2/stream/recentchange'):
-            if 'Russia' in (data := json.loads(event.data).get('title', '')):
-                continue
-            yield json.dumps(data)
 
 
     async def main():
