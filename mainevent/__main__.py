@@ -5,7 +5,7 @@ from pprint import pprint
 
 from aiosseclient import aiosseclient
 
-from mainevent.mainevent import subscriber, publisher, Pool
+from mainevent import subscriber, publisher, Pool
 
 
 
